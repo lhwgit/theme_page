@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a,
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+.clearfix:after {
+  content: "";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+/* @font-face {
+  font-family: PingFang-Medium;
+  src: url(fonts/PingFangSC-medium.ttf);
+} */
+@font-face {
+  font-family: PingFangSC-Thin;
+  src: url(fonts/PingFangSC-Thin1.ttf);
+}
+@font-face {
+  font-family: PingFang-Medium;
+  src: url(fonts/SF-UI-Display-Medium.otf);
+}
+.banner {
+  margin: 0 auto;
+  width: 100%;
+  height: 5rem;
+}
+.banner img {
+  width: 100%;
+}
+.products {
+  background-color: #70BFFB;
+  width: 100%;
+  padding: 0 2.667%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.products ul li {
+  float: left;
+  width: 48.6%;
+  background-color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
+  margin-top: 0.15rem;
+  border-radius: 0.1rem;
+}
+.products ul li a {
+  display: block;
+}
+.products ul li a img {
+  width: 100%;
+  border-radius: 0.1rem;
+}
+.products ul li a h3 {
+  font-size: 0.3rem;
+  font-family: PingFang-Medium;
+  color: #000;
+}
+.products ul li a h4 {
+  font-size: 0.22rem;
+  font-family: PingFangSC-Thin;
+  height: 0.8rem;
+  padding: 0.1rem 0.2rem;
+  color: #000;
+}
+.products ul li a .price {
+  font-size: 0.24rem;
+  background-color: #fdbaba;
+  width: 1.8rem;
+  height: 0.52rem;
+  border-radius: 30px;
+  color: #fffefe;
+  margin: auto;
+}
+.products ul li a .price span {
+  font-size: 0.4rem;
+}
+.products ul li:nth-of-type(2n) {
+  float: right;
+}
+@media screen and (min-width: 750px) {
+  .banner {
+    width: 750px;
+    height: 500px;
+  }
+  .products {
+    width: 750px;
+  }
+  .products ul {
+    width: 100%;
+  }
+  .products ul li {
+    width: 48.6%;
+  }
+  .products ul li a h3 {
+    font-size: 30px;
+  }
+  .products ul li a h4 {
+    font-size: 22px;
+    height: 80px;
+  }
+  .products ul li a .price {
+    font-size: 24px;
+    width: 180px;
+    height: 52px;
+  }
+  .products ul li a .price span {
+    font-size: 40px;
+  }
+}

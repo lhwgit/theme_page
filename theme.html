@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./theme.css"> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a,
+        a:link,
+        a:hover,
+        a:visited {
+            text-decoration: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        @font-face {
+            font-family: PingFang-Medium;
+            src: url('./fonts/SF-UI-Display-Medium.otf');
+        }
+
+        @font-face {
+            font-family: PingFangSC-Thin;
+            src: url('./fonts/SF-UI-Display-Thin.otf');
+        }
+
+        .banner {
+            margin: 0 auto;
+            width: 100%;
+            height: 5rem;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .products {
+            background-color: #70BFFB;
+            width: 100%;
+            padding: 0 2.667%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .products ul li {
+            float: left;
+            width: 48.6%;
+            background-color: #fff;
+            box-sizing: border-box;
+            text-align: center;
+            padding-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
+            margin-top: 0.15rem;
+            border-radius: 0.1rem;
+        }
+
+        .products ul li a {
+            display: block;
+        }
+
+        .products ul li a img {
+            width: 100%;
+            border-radius: 0.1rem;
+        }
+
+        .products ul li a h3 {
+            font-size: 0.3rem;
+            font-family: PingFang-Medium;
+            color: #000;
+        }
+
+        .products ul li a h4 {
+            font-size: 0.22rem;
+            font-family: PingFangSC-Thin;
+            height: 0.8rem;
+            padding: 0.1rem 0.2rem;
+            color: #000;
+        }
+
+        .products ul li a .price {
+            font-size: 0.24rem;
+            background-color: #fdbaba;
+            width: 1.8rem;
+            height: 0.52rem;
+            border-radius: 30px;
+            color: #fffefe;
+            margin: auto;
+        }
+
+        .products ul li a .price span {
+            font-size: 0.4rem;
+        }
+
+        .products ul li:nth-of-type(2n) {
+            float: right;
+        }
+
+        .products .gohome{
+            text-align: center;
+            /* margin-top: 0.34rem; */
+            font-size: 0;
+        }
+
+        .products .gohome img{
+            width: 4rem;
+            height: 1rem;
+            display: inline-block;
+        }
+
+        @media screen and (min-width: 750px) {
+            .banner {
+                width: 750px;
+                height: 500px;
+            }
+            .products {
+                width: 750px;
+            }
+            .products ul {
+                width: 100%;
+            }
+            .products ul li {
+                width: 48.6%;
+            }
+            .products ul li a h3 {
+                font-size: 30px;
+            }
+            .products ul li a h4 {
+                font-size: 22px;
+                height: 80px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .products ul li a .price {
+                font-size: 24px;
+                width: 180px;
+                height: 52px;
+            }
+            .products ul li a .price span {
+                font-size: 40px;
+            }
+
+            .products .gohome{
+                padding-bottom: 15px;
+            }
+            .products .gohome img{
+                width: 400px;
+                height: 100px;
+            }
+        }
+    </style>
+    <script>
+        getRem(750, 100)
+        window.onresize = function () {
+            getRem(750, 100)
+        };
+        //用来设置html的font-size
+        function getRem(pwidth, prem) {
+            //获取html元素
+            var html = document.getElementsByTagName("html")[0];
+            //获取视窗宽度
+            //下面的代码是为了考虑兼容性
+            //在IE7、IE8、Firefox中，document.body.clientWidth以及 document.body.clientHeightzhi值为0，此时，可以使用 document.documentElement.clientHeight等代替。
+            var oWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="./images/banner.png" alt="">
+    </div>
+    <div class="products">
+        <ul class="clearfix">
+            <li>
+                <a href="http://click.linksynergy.com/link?id=75PwxuO*sL8&offerid=357944.99184676&type=15&murl=https%3A%2F%2Fshop.nordstrom.com%2FS%2F5085781%3Futm_source%3Drakuten%26utm_medium%3Daffiliate%26utm_campaign%3Ddatafeed%26utm_contentWomen%3AMakeup%3ACheek%26utm_term%3D5716612%26utm_channel%3Daffiliate_ret_p%26sp_source%3Drakuten%26sp_campaign%3Ddatafeed">
+                    <img src="./images/Best-New-makeup-to-try_05.jpg" alt="">
+                    <h3>BECCA</h3>
+                    <h4 style="padding: 0.1rem;">Shimmering Skin Perfector Pressed Highlighter</h4>
+                    <div class="price">
+                        $
+                        <span>38.0</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://click.linksynergy.com/link?id=75PwxuO*sL8&offerid=422019.12783637684&type=15&murl=https%3A%2F%2Fus.amorepacific.com%2Fcolor-illuminating-compact">
+                    <img src="./images/Best-New-makeup-to-try_08.jpg" alt="">
+                    <h3>AMOREPACIFIC</h3>
+                    <h4>Color Illuminating Compact 0.45 oz/ 13 g</h4>
+                    <div class="price">
+                        $
+                        <span>50.0</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://click.linksynergy.com/link?id=75PwxuO*sL8&offerid=504656.13217948679&type=15&murl=https%3A%2F%2Fwww.bareminerals.com%2FBlemish-Rescue-Skin-Clearing-Loose-Powder-Foundation-MEDIUM-TAN-3-5CN%2FUS86395.html">
+                    <img src="./images/Best-New-makeup-to-try_12.jpg" alt="">
+                    <h3>BAREMINERALS</h3>
+                    <h4>Blemish Rescue Skin Clearing Loose Powder Foundation</h4>
+                    <div class="price">
+                        $
+                        <span>29.0</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://click.linksynergy.com/link?id=75PwxuO*sL8&offerid=357944.95670573&type=15&murl=https%3A%2F%2Fshop.nordstrom.com%2FS%2F4418407%3Futm_source%3Drakuten%26utm_medium%3Daffiliate%26utm_campaign%3Ddatafeed%26utm_contentWomen%3AMakeup%3AEye%26utm_term%3D5213870%26utm_channel%3Daffiliate_ret_p%26sp_source%3Drakuten%26sp_campaign%3Ddatafeed">
+                    <img src="./images/Best-New-makeup-to-try_14.jpg" alt="">
+                    <h3>URBAN DECAY</h3>
+                    <h4>Moondust Palette</h4>
+                    <div class="price">
+                        $
+                        <span>49.0</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://click.linksynergy.com/link?id=75PwxuO*sL8&offerid=357944.19065008&type=15&murl=https%3A%2F%2Fshop.nordstrom.com%2FS%2F5036853%3Futm_source%3Drakuten%26utm_medium%3Daffiliate%26utm_campaign%3Ddatafeed%26utm_contentWomen%3AMakeup%3AFoundation%26utm_term%3D5678007%26utm_channel%3Daffiliate_ret_p%26sp_source%3Drakuten%26sp_campaign%3Ddatafeed">
+                    <img src="./images/Best-New-makeup-to-try_19.jpg" alt="">
+                    <h3>CHARLOTTE TILbURY</h3>
+                    <h4>Magic Away Concealer</h4>
+                    <div class="price">
+                        $
+                        <span>32.0</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://click.linksynergy.com/link?id=75PwxuO*sL8&offerid=422019.12783637684&type=15&murl=https%3A%2F%2Fus.amorepacific.com%2Fcolor-illuminating-compact">
+                    <img src="./images/Best-New-makeup-to-try_21.png" alt="">
+                    <h3>HOURGLASS</h3>
+                    <h4>Caution Extreme Lash Mascara</h4>
+                    <div class="price">
+                        $
+                        <span>29.0</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="gohome">
+            <a href="http://fabloox.com"><img src="./images/home.png" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>
